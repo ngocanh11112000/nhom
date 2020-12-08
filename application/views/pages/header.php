@@ -26,12 +26,22 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-6">
+                        
+
                         <i class="fa fa-envelope"></i>
-                        support@email.com
+                          <?php foreach ($qu as $row1)
+                                     { ?>
+                                        <?php echo $row1->email; ?>
+                                    <?php } ?>
+                                    
                     </div>
                     <div class="col-sm-6">
                         <i class="fa fa-phone-alt"></i>
-                        +84-355-214-715
+                       
+                                         <?php foreach ($qu as $row1)
+                                     { ?>
+                                        <?php echo $row1->sodienthoai; ?>
+                                          <?php } ?>
                     </div>
                 </div>
             </div>
@@ -49,29 +59,28 @@
 
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="product-list.html" class="nav-item nav-link">Products</a>
-                            <a href="<?= base_url() ?>index.php/Product" class="nav-item nav-link">Product Detail</a>
+                            <a href="<?= base_url() ?>index.php/Home" class="nav-item nav-link active">Home</a>
+                            <a href="<?= base_url() ?>index.php/Product_list" class="nav-item nav-link">Products</a>
+                            <a href="<?= base_url() ?>index.php/Product_detail" class="nav-item nav-link">Product Detail</a>
                             <a href="<?= base_url() ?>index.php/Cart" class="nav-item nav-link">Cart</a>
-                            <a href="checkout.html" class="nav-item nav-link">Checkout</a>
-                            <a href="my-account.html" class="nav-item nav-link">My Account</a>
+                            <a href="<?= base_url() ?>index.php/Checkout" class="nav-item nav-link">Checkout</a>
+                            <a href="<?= base_url() ?>index.php/My_account" class="nav-item nav-link">My Account</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
                                 <div class="dropdown-menu">
                             
-                                    <a href="<?= base_url()?>index.php/Login" class="dropdown-item">Login</a>
-                                    <a href="<?= base_url() ?>index.php/Register" class="dropdown-item"> Register</a>
 
-                                    <a href="contact.html" class="dropdown-item">Contact Us</a>
+                                    <a href="<?= base_url() ?>index.php/Contact" class="dropdown-item">Contact Us</a>
                                 </div>
                             </div>
                         </div>
                         <div class="navbar-nav ml-auto">
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Accout</a>
                                 <div class="dropdown-menu">
-                                    <a href="#" class="dropdown-item">Login</a>
-                                    <a href="#" class="dropdown-item">Register</a>
+                                    <a href="<?= base_url()?>index.php/Login " class="dropdown-item">Login</a>
+                                    <a href="<?= base_url() ?>index.php/Register " class="dropdown-item">Register</a>
+                                     <a  href="<?= base_url() ?>index.php/Home" class="dropdown-item">Logout</a>
                                 </div>
                             </div>
                         </div>

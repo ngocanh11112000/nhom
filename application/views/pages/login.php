@@ -1,4 +1,4 @@
- <?php include "header.php";?>
+<?php $this->load->view('pages/header.php'); ?>
         
         <!-- Login Start -->
         <div class="login">
