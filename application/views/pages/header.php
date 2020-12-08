@@ -68,7 +68,16 @@
                         </div>
                         <div class="navbar-nav ml-auto">
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                    <?php
+                                       if(isset($lastname)){
+                                            echo $lastname;
+                                            }
+                                            else{
+                                                }
+                                     ?>
+
+                                </a>
                                 <div class="dropdown-menu">
                                     <a href="#" class="dropdown-item">Login</a>
                                     <a href="#" class="dropdown-item">Register</a>

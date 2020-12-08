@@ -10,8 +10,7 @@ class Login extends CI_Controller {
 	public function index()
 	{
 	    
-
-		$msg="";
+$lastname= "User Accout";
 		$data[]="";
 
 
@@ -32,9 +31,8 @@ class Login extends CI_Controller {
 
           	// If user did validate, 
               // Send them to members area
-          
-            header ('Location: http://localhost/hihi/');
-        
+            $lastname= $dlieu['email'] ;
+            $this->load->view('pages/index');
               }else{
       
               // If user did not validate, then show them login page again
@@ -43,7 +41,7 @@ class Login extends CI_Controller {
           
           }}   
           	
-          $this->load->view('pages/login');
+          $this->load->view('pages/login',$data);
 	  
       }
     
