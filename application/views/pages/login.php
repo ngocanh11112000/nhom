@@ -1,4 +1,4 @@
-<?php $this->load->view('pages/header.php'); ?>
+
         
         <!-- Login Start -->
         <div class="login">
@@ -38,6 +38,4 @@
         </div>
         <!-- Login End -->
         
-   <?php 
-        include "footer.php";
- ?>   
+  

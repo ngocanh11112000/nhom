@@ -1,4 +1,4 @@
- <?php include "header.php";?>
+
         
         <!-- Breadcrumb Start -->
         <div class="breadcrumb-wrap">
@@ -21,7 +21,6 @@
                             <h2>Our Office</h2>
                            <?php foreach ($shop as $row)
                                      { ?>
-
                             <h3><i class="fa fa-map-marker"></i><?php echo $row->diachi; ?></h3>
                             <h3><i class="fa fa-envelope"></i><?php echo $row->email; ?></h3>
                             <h3><i class="fa fa-phone"></i><?php echo $row->sodienthoai; ?></h3>
@@ -87,6 +86,4 @@
         </div>
         <!-- Contact End -->
         
-      <?php 
-        include "footer.php";
- ?>   
+  

@@ -5,20 +5,26 @@ class Login_model extends CI_Model{
         parent::__construct();
     }
     public function validate($dlieu) {
-
+    	
 		$condition = "email =" . "'" . $dlieu['email'] . "' AND " . "password =" . "'" . $dlieu['password'] . "'";
 		$this->db->select('*');
 		$this->db->from('dangnhap');
 		$this->db->where($condition);
 		$this->db->limit(1);
-		$query = $this->db->get();
+		 $query = $this->db->get();
 
 		if ($query->num_rows() == 1) {
 		return true;
 		} else {
 		return false;
 		}
-		}
+		 }
+		 
+   
+  public function user() {
+      $query = $this->db->query('SELECT * FROM dangnhap');
+      return $query->result();
+    }
 
 
 }

@@ -6,9 +6,13 @@
                         <div class="footer-widget">
                             <h2>Get in Touch</h2>
                             <div class="contact-info">
-                                <p><i class="fa fa-map-marker"></i>Số 54-Triều Khúc-Thanh Xuân - Hà Nội</p>
-                                <p><i class="fa fa-envelope"></i>kidshop@gmail.com</p>
-                                <p><i class="fa fa-phone"></i>+84-355-214-715</p>
+                                  <?php foreach ($shop as $row)
+                                     { ?>
+                                <p><i class="fa fa-map-marker"></i><?php echo $row->diachi; ?></p>
+                                <p><i class="fa fa-envelope"></i><?php echo $row->email; ?></p>
+                                <p><i class="fa fa-phone"></i><?php echo $row->sodienthoai; ?></p>
+                                
+                             <?php } ?>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 
-         <?php include "header.php";?>
+       
         <!-- Breadcrumb Start -->
         <div class="breadcrumb-wrap">
             <div class="container-fluid">
@@ -155,6 +155,4 @@
             </div>
         </div>
         <!-- Cart End -->
-    <?php 
-        include "footer.php";
- ?>   
+  

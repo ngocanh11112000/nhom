@@ -6,13 +6,17 @@ class Contact extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('contact_model');
+		$this->load->model('login_model');
 	}
 
 	public function index()
 	{
 
         $data['shop'] = $this->contact_model->get_all();
+        $data['tb'] =  $this->login_model->user();
+		$this->load->view('pages/header',$data);
 		$this->load->view('pages/contact',$data);
+		$this->load->view('pages/footer',$data);
 	}
 	
 }

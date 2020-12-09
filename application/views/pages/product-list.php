@@ -1,5 +1,4 @@
- 
-    <?php include "header.php";?>     
+    
         <!-- Breadcrumb Start -->
         <div class="breadcrumb-wrap">
             <div class="container-fluid">
@@ -491,6 +490,4 @@
             </div>
         </div>
         <!-- Brand End -->
-     <?php 
-        include "footer.php";
- ?>   
+  

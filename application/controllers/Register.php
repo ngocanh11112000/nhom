@@ -8,9 +8,18 @@ class Register extends CI_Controller {
 		$this->load->helper(array('url','form'));
 		$this->load->library(array('form_validation'));
 		$this->load->model('register_model'); //Tải model user_model.php
+		$this->load->model('contact_model');
 	}
 	public function index()
 	{
+
+		 // phần thông tin shop như địa chỉ số điện thoại
+    $dt['shop'] = $this->contact_model->get_all();
+
+    $this->load->view('pages/header',$dt);
+    $this->load->view('pages/register',$dt);
+     $this->load->view('pages/footer',$dt);
+		// xử lý đăng ký
 		$thongbao="";
 		$data[]="";
 		if($this->input->post('re')){
@@ -36,7 +45,7 @@ class Register extends CI_Controller {
 		 $thongbao="<h3 style='color:blue'>thất bại</h3>";}//}
 	 $data['thongbao'] =$thongbao;
 		}
-$this->load->view('pages/register',$data,FALSE);
+//$this->load->view('pages/register',$data,FALSE);
 }}
 /* End of file Register.php */
 /* Location: ./application/controllers/Register.php */

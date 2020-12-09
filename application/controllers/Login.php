@@ -5,15 +5,15 @@ class Login extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+    $this->load->model('contact_model');
+    //$this->load->model('user_model');
 	}
+
 
 	public function index()
 	{
-	    
-    $lastname= "User Accout";
-		$data[]="";
-
-
+	       
+    //đăng nhập
 
 
 		if($this->input->post('lo')){
@@ -27,24 +27,40 @@ class Login extends CI_Controller {
       		);
            $result = $this->login_model->validate($dlieu);
           // Now we verify the result
-          if($result == TRUE){
+          if($result == true){
 
-          	// If user did validate, 
-              // Send them to members area
-            
-            $this->load->view('pages/index');
+
+             $tbao= $this->login_model->user();
+
+
+             foreach ($tbao as $row)
+                     if ($dlieu['email']==$row->email ) {
+                           //Lưu tên đăng nhập
+                           $_SESSION['tb'] = $row->lastname;
+                    
+                    }
+
+         header("Location:http://localhost/hihi/index.php/home ");
+           
               }else{
-      
+       
               // If user did not validate, then show them login page again
-            
-               header ('Location: http://localhost/hihi/index.php/Login');
-          
+
+    header("Location:http://localhost/hihi/index.php/login ");  
           }}   
-          	
-          $this->load->view('pages/login',$data);
-	  
-      }
+
+    // phần thông tin shop như địa chỉ số điện thoại
+          $dt['shop'] = $this->contact_model->get_all();
+
+           
+          $this->load->view('pages/header',$dt);
+           $this->load->view('pages/login',$dt);
+            $this->load->view('pages/footer',$dt);
+
+          	}
+
     
+          
 }
 
 /* End of file Login.php */

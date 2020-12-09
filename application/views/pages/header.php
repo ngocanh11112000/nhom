@@ -23,28 +23,31 @@
     <body>
         <!-- Top bar Start -->
         <div class="top-bar">
+           
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-6">
                         
-
+                          
                         <i class="fa fa-envelope"></i>
-                          <?php foreach ($qu as $row1)
+                            <?php foreach ($shop as $row)
                                      { ?>
-                                        <?php echo $row1->email; ?>
-                                    <?php } ?>
-                                    
+                          <?php  echo $row->email; ?>
+                             <?php   } ?>
                     </div>
                     <div class="col-sm-6">
+                      
+                                   
                         <i class="fa fa-phone-alt"></i>
-                       
-                                         <?php foreach ($qu as $row1)
+                                        <?php foreach ($shop as $row)
                                      { ?>
-                                        <?php echo $row1->sodienthoai; ?>
-                                          <?php } ?>
+                          <?php  echo $row->sodienthoai; ?>
+                             <?php   } ?>
+                                         
                     </div>
                 </div>
             </div>
+          
         </div>
         <!-- Top bar End -->
         
@@ -76,11 +79,21 @@
                         </div>
                         <div class="navbar-nav ml-auto">
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Accout</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><?php 
+            if(isset($_SESSION['tb'])){
+                echo $_SESSION['tb'];
+            }
+            else{
+                echo "User";
+            }
+            ;
+             ?>
+                                    
+                                </a>
                                 <div class="dropdown-menu">
                                     <a href="<?= base_url()?>index.php/Login " class="dropdown-item">Login</a>
                                     <a href="<?= base_url() ?>index.php/Register " class="dropdown-item">Register</a>
-                                     <a  href="<?= base_url() ?>index.php/Home" class="dropdown-item">Logout</a>
+                                     <a  href="<?= base_url() ?>index.php/Logout" class="dropdown-item">Logout</a>
                                 </div>
                             </div>
                         </div>

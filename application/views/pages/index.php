@@ -1,5 +1,5 @@
 
-    <?php include "header.php";?>     
+   
         <!-- Main Slider Start -->
         <div class="header">
             <div class="container-fluid">
@@ -590,6 +590,4 @@
         </div>
         <!-- Feature End-->            
         
-      <?php 
-        include "footer.php";
- ?>   
+    
