@@ -18,6 +18,7 @@
         <link href="../public/lib/slick/slick-theme.css" rel="stylesheet">
         <!-- Stylesheet -->
         <link href="../public/css/style.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     </head>
 
     <body>
@@ -65,9 +66,20 @@
                             <a href="<?= base_url() ?>index.php/Home" class="nav-item nav-link active">Home</a>
                             <a href="<?= base_url() ?>index.php/Product_list" class="nav-item nav-link">Products</a>
                             <a href="<?= base_url() ?>index.php/Product_detail" class="nav-item nav-link">Product Detail</a>
+                            <?php  if(isset($_SESSION['tb'])){  ?>
+               
+            
                             <a href="<?= base_url() ?>index.php/Cart" class="nav-item nav-link">Cart</a>
+
                             <a href="<?= base_url() ?>index.php/Checkout" class="nav-item nav-link">Checkout</a>
                             <a href="<?= base_url() ?>index.php/My_account" class="nav-item nav-link">My Account</a>
+
+                          <?php       }
+                            else{
+                                
+                            }
+                            ;
+                             ?>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
                                 <div class="dropdown-menu">
@@ -122,10 +134,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="user">
-                            <a href="wishlist.html" class="btn wishlist">
-                                <i class="fa fa-heart"></i>
-                                <span>(0)</span>
-                            </a>
+                            
                             <a href="cart.html" class="btn cart">
                                 <i class="fa fa-shopping-cart"></i>
                                 <span>(0)</span>

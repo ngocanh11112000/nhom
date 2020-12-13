@@ -22,11 +22,16 @@
                             <h2>Follow Us</h2>
                             <div class="contact-info">
                                 <div class="social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                    <?php foreach ($mangxh as $row1)
+                                     { ?>
+                                    <a href="<?php echo $row1->twitter ; ?> "><i class="fab fa-twitter"></i></a>
+                                    <a href="<?php echo $row1->facebook ; ?>"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="<?php echo $row1->linkedin ; ?>"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="<?php echo $row1->instagram ; ?>"><i class="fab fa-instagram"></i></a>
+                                    <a href="<?php echo $row1->youtube ; ?>"><i class="fab fa-youtube"></i></a>
+
+
+                             <?php } ?>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +85,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 copyright">
-                        <p>Copyright &copy; <a href="https://htmlcodex.com">HTML Codex</a>. All Rights Reserved</p>
+                        <p>Copyright &copy; Nhom 8 </p>
                     </div>
 
                    

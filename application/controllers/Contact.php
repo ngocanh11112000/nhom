@@ -14,6 +14,7 @@ class Contact extends CI_Controller {
 
         $data['shop'] = $this->contact_model->get_all();
         $data['tb'] =  $this->login_model->user();
+        $data['mangxh']= $this->contact_model->mangxh();
 		$this->load->view('pages/header',$data);
 		$this->load->view('pages/contact',$data);
 		$this->load->view('pages/footer',$data);

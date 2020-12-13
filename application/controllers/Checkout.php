@@ -6,18 +6,22 @@ class Checkout extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('contact_model');
+		$this->load->model('checkout_model');
 	}
 
 	public function index()
 	{
-        $data['shop'] = $this->contact_model->get_all();
 
+		// thông tin địa chỉ shop
+        $data['shop'] = $this->contact_model->get_all();
+// mạng xã hội
+		  $data['mangxh']= $this->contact_model->mangxh();
 		$this->load->view('pages/header',$data);
 		$this->load->view('pages/checkout',$data);
 		 $this->load->view('pages/footer',$data);
 
 	}
-
+	
 }
 
 /* End of file Checkout.php */

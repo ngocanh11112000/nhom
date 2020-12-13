@@ -62,18 +62,18 @@
                                         <div class="p-size">
                                             <h4>Size:</h4>
                                             <div class="btn-group btn-group-sm">
-                                                <button type="button" class="btn">S</button>
-                                                <button type="button" class="btn">M</button>
-                                                <button type="button" class="btn">L</button>
-                                                <button type="button" class="btn">XL</button>
+                                                <button name="size" type="button" class="btn">S</button>
+                                                <button name="size"  type="button" class="btn">M</button>
+                                                <button name="size"  type="button" class="btn">L</button>
+                                                <button  name="size"  type="button" class="btn">XL</button>
                                             </div> 
                                         </div>
                                         <div class="p-color">
                                             <h4>Color:</h4>
-                                            <div class="btn-group btn-group-sm">
-                                                <button type="button" class="btn">White</button>
-                                                <button type="button" class="btn">Black</button>
-                                                <button type="button" class="btn">Blue</button>
+                                            <div class="btn-group btn-group-sm ">
+                                                <button name="color"  type="button" class="btn">White</button>
+                                                <button name="color" type="button" class="btn">Black</button>
+                                                <button name="color" type="button" class="btn">Blue</button>
                                             </div> 
                                         </div>
                                         <div class="action">

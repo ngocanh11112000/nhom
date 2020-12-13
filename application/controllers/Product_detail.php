@@ -12,7 +12,8 @@ class Product_detail extends CI_Controller {
 	{
 		 // phần thông tin shop như địa chỉ số điện thoại
     $dt['shop'] = $this->contact_model->get_all();
-
+// mạng xã hội
+		  $st['mangxh']= $this->contact_model->mangxh();
     $this->load->view('pages/header',$dt);
     $this->load->view('pages/Product-detail',$dt);
      $this->load->view('pages/footer',$dt);

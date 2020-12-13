@@ -13,6 +13,8 @@ class Logout extends CI_Controller {
  
 		if (isset($_SESSION['tb'])){
 		    unset($_SESSION['tb']);
+		      unset($_SESSION['em']);
+		       unset($_SESSION['id']);
 		     // xóa session login
 		    // $_SESSION['tb']="User";
 		}

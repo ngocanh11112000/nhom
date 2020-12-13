@@ -12,7 +12,8 @@ class Home extends CI_Controller {
 	{
 		// phần thông tin shop như địa chỉ số điện thoại
 		$data['shop'] = $this->contact_model->get_all();
-		 
+		 // mạng xã hội
+		  $data['mangxh']= $this->contact_model->mangxh();
 		$this->load->view('pages/header',$data);
 		$this->load->view('pages/index',$data);
 		 $this->load->view('pages/footer',$data);

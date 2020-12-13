@@ -9,7 +9,7 @@
                         <div class="login-form">
                             
                             <div class="row">
-                                
+                                <form method="post">
                                 <div class="col-md-6">
                                     <label>E-mail</label>
                                     <input class="form-control" type="text" name="email" 
@@ -29,8 +29,9 @@
                                 <div class="col-md-12">
                                     <input name="lo" value="Submit" class="btn" type="submit"></input>
                                 </div>
+                                 </form>
                             </div>
-                            </form>
+                           
                         </div>
                     </div>
                 </div>

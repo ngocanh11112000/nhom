@@ -11,8 +11,11 @@ class Footer extends CI_Controller {
 	public function index()
 	{
 		   $data['shop'] = $this->contact_model->get_all();
-		$this->load->view('pages/footer',$data);
+
+		   	$this->load->view('pages/footer',$data);
 	}
+
+	
 
 }
 

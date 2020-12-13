@@ -454,7 +454,7 @@
                                 </div>
                             </div>
                             <div class="product-image">
-                                <a href="../product-detail.html">
+                                <a href="product-detail.html">
                                     <img src="../public/img/product-10.jpg" alt="Product Image">
                                 </a>
                                 <div class="product-action">

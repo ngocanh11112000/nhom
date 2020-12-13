@@ -15,7 +15,8 @@ class Register extends CI_Controller {
 
 		 // phần thông tin shop như địa chỉ số điện thoại
     $dt['shop'] = $this->contact_model->get_all();
-
+// mạng xã hội
+		  $data['mangxh']= $this->contact_model->mangxh();
     $this->load->view('pages/header',$dt);
     $this->load->view('pages/register',$dt);
      $this->load->view('pages/footer',$dt);

@@ -13,6 +13,13 @@ class contact_model extends CI_Model {
       $query = $this->db->query('SELECT * FROM thongtinshop');
       return $query->result();
     }
+    public function mangxh()
+	{
+		
+      $query = $this->db->query('SELECT * FROM mangxahoi');
+      return $query->result();
+    
+	}
 }
 
 /* End of file contact_view.php */
